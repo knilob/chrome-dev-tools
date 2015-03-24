@@ -1,0 +1,7 @@
+{
+  "name": "presentation-using-chrome-dev-tools-for-web-development",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}

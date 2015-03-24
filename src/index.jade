@@ -1,0 +1,190 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Chrome Dev Tools
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Open+Sans:300,600')
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article
+
+      section
+        h1 Chrome Dev Tools
+        h3
+          a(href='http://twitter.com/knilob') @knilob
+        img(src='https://en.gravatar.com/userimage/23465/ebe493c4dc236f531cb529d816bf5756.jpg?size=500', class='avatar avatar--small')
+
+      section(class='gif gif--street-fighter')
+        h1 Chrome Dev Tools
+          br
+          | vs.
+          br
+          | Firebug/Firefox
+
+      section
+        h2.bullet Chrome Dev Tools vs. Firebug/Firefox
+        ul
+          li(data-bespoke-bullet) Don't fix what isn't broken.
+          li(data-bespoke-bullet) Feature parity is pretty even now.
+            ul
+              li(data-bespoke-bullet) Even Firefox's Ionmonkey Javascript engine beats Chrome's V8 in some tests.
+          li(data-bespoke-bullet) Doesn't require a plugin like Firebug.
+          li(data-bespoke-bullet) Integrates with IDEs and editors.
+            ul
+              li(data-bespoke-bullet) JetBrains WebStorm
+              li(data-bespoke-bullet) Sublime Text 2/3
+              li(data-bespoke-bullet) Adobe Brackets
+
+      section(class='gif gif--activities')
+        h1 Setting Up Your Environment
+
+      section
+        h2.bullet Setting Up Your Environment
+        h3 Best to install Chrome Canary along with Chrome Stable.
+        ul
+          li(data-bespoke-bullet) Chrome Canary gets you access to all of the latest enhancements.
+          li(data-bespoke-bullet) Canary updates every night. Things might break.
+            ul
+              li(data-bespoke-bullet) Good idea to test in both Canary and Stable. Canary will become Stable in 12 weeks.
+          li(data-bespoke-bullet) Use chrome://flags to toggle the "Enable Developer Tools experiments".
+          li(data-bespoke-bullet) Add a local folder to your workspace
+
+      section(class='gif gif--monkey')
+        h1 Inspecting HTML & CSS Elements
+
+      section
+        h2.bullet Inspecting HTML & CSS Elements
+        ul
+          li(data-bespoke-bullet) How to open DevTools.
+          li(data-bespoke-bullet) Navigating the DOM.
+          li(data-bespoke-bullet) Viewing CSS selectors and applied styles.
+          li(data-bespoke-bullet) Editing HTML
+            ul
+              li(data-bespoke-bullet) Drag and drop to reorder nodes.
+              li(data-bespoke-bullet) Live edit content.
+          li(data-bespoke-bullet) Editing CSS
+            ul
+              li(data-bespoke-bullet) Edit individual element styles.
+              li(data-bespoke-bullet) Edit the entire CSS document.
+
+      section(class='gif gif--matrix')
+        h1 Console Tips
+          br
+          | & Tricks
+
+      section
+        h2.bullet Console Tips & Tricks
+        pre(data-bespoke-bullet)
+          code.language-javascript.
+            copy() = Grab string data.
+            inpect() = Jump to the current element in the Elements tab.
+            $0–$4 = References the five most recently selected elements.
+            $_ = References the last evaluated expression.
+            $(), $$(), and $x()
+            clear() = Wipes your console area clean.
+        p You can also inspect different frames.
+
+      section(class='gif gif--programming')
+        h1 Javascript Tools
+          br
+          | & Sources Tab
+
+      section
+        h2.bullet Javascript Debugging
+        h3 Sources tab displays the interface for the V8 debugger.
+        ul
+          li(data-bespoke-bullet) Code on the left. Debugger controls on the right.
+          li(data-bespoke-bullet) Add breakpoints in the line gutter of the source code.
+            ul
+              li(data-bespoke-bullet) Multiples
+              li(data-bespoke-bullet) Conditionals
+          li(data-bespoke-bullet) Don't forget about the debugger keyword.
+          li(data-bespoke-bullet) Able to blackbox files.
+          li(data-bespoke-bullet) Two useful options:
+            ul
+              li(data-bespoke-bullet) Pretty Print
+              li(data-bespoke-bullet) Source Maps
+
+      section(class='gif gif--resources')
+        h1 Overview of the Resources Tab
+
+      section
+        h2.bullet Resources Tab
+        ul
+          li(data-bespoke-bullet) Used to inspect local data sources used by your application:
+            ul
+              li(data-bespoke-bullet) IndexedDB
+              li(data-bespoke-bullet) WebSQL
+              li(data-bespoke-bullet) Cookies
+              li(data-bespoke-bullet) Application Cache
+              li(data-bespoke-bullet) Local and Session Storage
+              li(data-bespoke-bullet) Other Page Resources
+                ul
+                  li(data-bespoke-bullet) Broken out by frames
+                  li(data-bespoke-bullet) Images
+                  li(data-bespoke-bullet) Fonts
+                  li(data-bespoke-bullet) Etc…
+      
+      section(class='gif gif--network')
+        h1 Basic Overview of the Network Tab
+
+      section
+        h2.bullet Network Tab
+        ul
+          li(data-bespoke-bullet) Allows you to figure out what's slowing your page down.
+          li(data-bespoke-bullet) Record Network Log tracks network requests as you navigate.
+          li(data-bespoke-bullet) Clear out results with the clear button.
+          li(data-bespoke-bullet) Filter results by type, status code, size (larger-than), domain, mime-type, etc…
+          li(data-bespoke-bullet) Waterfall view highlights DOMContentLoaded ($(document).ready in jQuery) and load ($(window).load or window.onload) event firings.
+
+      section(class='gif gif--plugins')
+        h1 Useful Plugins
+
+      section
+        h2.bullet Useful Plugins
+        ul
+          li(data-bespoke-bullet) Integrate into Dev Tools
+            ul
+              li(data-bespoke-bullet) Google Analytics Debugger
+              li(data-bespoke-bullet) Javascript Framework Specific Plugins (e.g., Batarang for AngularJS)
+              li(data-bespoke-bullet) ScratchJS
+              li(data-bespoke-bullet) Other Language Specific Plugins (e.g., PHP Console, Xdebug Helper, RailsPanel)
+              li(data-bespoke-bullet) YSlow Page Speed Testing
+          li(data-bespoke-bullet) Generally Useful
+            ul
+              li(data-bespoke-bullet) Cache Killer
+              li(data-bespoke-bullet) JSON View
+              li(data-bespoke-bullet) Wappalyzer
+
+      section(class='gif gif--swag')
+        h1 People and Sites
+          br
+          | to Follow
+
+      section
+        h2.bullet People and Sites to Follow
+        ul
+          li
+            a(href='http://twitter.com/paul_irish') Paul Irish (@paul_irish)
+          li
+            a(href='http://twitter.com/addyosmani') Addy Osmani (@addyosmani)
+          li
+            a(href='http://twitter.com/ChromeDevTools') Chrome Dev Tools (@ChromeDevTools)
+          li
+            a(href='http://twitter.com/ChromiumDev') Chrome Developers (@ChromiumDev)
+          li
+            a(href='http://html5rocks.com/') HTML5 Rocks
+          li
+            a(href='http://devtoolsecrets.com/') Dev Tools Secrets
+          li
+            a(href='https://developer.chrome.com/devtools/') Chrome Dev Tools Documentation
+          li
+            a(href='http://discover-devtools.codeschool.com/') Discover Dev Tools Codeschool Course
+
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h1.bullet Questions?
+
+    script(src='build/build.js')
